@@ -12,4 +12,6 @@
         {!! Form::submit('削除') !!}
     {!! Form::close() !!}
 
+    <p>{!! link_to_route('tasks.index', 'TOPへ') !!}</p>
+
 @endsection

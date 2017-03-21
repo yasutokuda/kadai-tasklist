@@ -13,4 +13,6 @@
 
     {!! Form::close() !!}
 
+    <p>{!! link_to_route('tasks.index', 'TOPへ') !!}</p>
+
 @endsection

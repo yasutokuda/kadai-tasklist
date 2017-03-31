@@ -52,10 +52,15 @@ class TasksController extends Controller
             'status' => 'required|max:255',
         ]);
 
-        $task = new Task;
+        /*$task = new Task;
         $task->content = $request->content;
         $task->status = $request->status;
         $task->save();
+        */
+        $request->user()->tasks()->create([
+            'content' => $request->content,
+            'status' => $request->status,
+        ]);
 
         return redirect('/');
     }
